@@ -2,7 +2,7 @@
 
 > ...because it's magic
 
-The basic idea of **mrlin** is to enable **M**ap**R**educe processing of **Lin**ked Data (hence the name). In the following I'm going to show you first to how to use HBase to store Linked Data with RDF and then how to use Hadoop to do execute MapReduce jobs.
+The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin**ked Data (hence the name). In the following I'm going to show you first to how to use HBase to store Linked Data with RDF and then how to use Hadoop to do execute MapReduce jobs.
 
 ## Dependencies
 
