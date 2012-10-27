@@ -63,7 +63,6 @@ Right, looks good. How about adding another `rdf:type` information, such as `foa
 ... and again let's see how we're doing:
 
 	hbase(main):008:0> scan 'rdf'
-
 	ROW                          COLUMN+CELL                                                                                                                                                                                                              
 	 http://mhausenblas.info/#i  column=G:, timestamp=1351372113753, value=http://example.org                                                                                                                                                             
 	 http://mhausenblas.info/#i  column=O:1, timestamp=1351372247689, value=http://schema.org/Person                                                                                                                                                      
@@ -100,14 +99,14 @@ Or how about only the first predicate-object pair? Try:
 	 P:1     timestamp=1351372243242, value=http://www.w3.org/1999/02/22-rdf-syntax-ns#type                                                                                                                                           
 	2 row(s) in 0.0260 seconds
 
-
-Scanning for entities that contain a certain string in the object value (we add another entity first to demonstrate this better):
+Assume we'd like to scan for entities that contain a certain string in the object value. But first let's add another entity to demonstrate this better:
 	
 	hbase(main):013:0> put 'rdf', 'http://example.org/#dummy', 'G:', 'http://example.org'
 	hbase(main):014:0> put 'rdf', 'http://example.org/#dummy', 'P:1', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
 	hbase(main):015:0> put 'rdf', 'http://example.org/#dummy', 'O:1', 'http://schema.org/Thing'
 
-Then:
+Now we issue the scan - we're looking for entities that start with the substring `Michael` somewhere and return the key and the value of the object column family.
+
 	hbase(main):016:0> scan 'rdf', { COLUMNS => ['O'], FILTER => "ValueFilter(=,'substring:Michael')"}
 	ROW                          COLUMN+CELL                                                                                                                                                                                                              
 	 http://mhausenblas.info/#i  column=O:3, timestamp=1351373497310, value=Michael                                                                                                                                                                       
