@@ -1,4 +1,4 @@
-# mrlin - MapReduce
+# mrlin - MapReduce processing of Linked Data
 
 > ...because it's magic
 
