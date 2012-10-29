@@ -2,8 +2,14 @@
 """
 mrlin - tools - import
 
-Imports an RDF/NTriples document concerning a graph URI into an HBase table
-with the following schema: create 'rdf', 'G', 'P', 'O'.
+Imports an RDF/NTriples document concerning a graph URI
+into an HBase table with the following schema: 
+create 'rdf', 'G', 'P', 'O'.
+
+Usage: python import_ntriples.py path/to/file or URL
+Examples: 
+       python import_ntriples.py data/Galway.ntriples
+       python import_ntriples.py http://dbpedia.org/data/Galway.ntriples
 
 Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.
 
@@ -12,7 +18,7 @@ Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache Lic
 @status: init
 """
 
-import sys, logging, datetime, urllib, urllib2, json, requests, urlparse, ntriples
+import sys, logging, datetime, urllib, urllib2, json, requests, urlparse, ntriples, pprint
 from os import curdir, sep
 
 # configuration
@@ -25,44 +31,54 @@ else:
 	FORMAT = '%(asctime)-0s %(message)s'
 	logging.basicConfig(level=logging.INFO, format=FORMAT, datefmt='%Y-%m-%dT%I:%M:%S')
 
-
-def import_data(input_file):
-	if DEBUG: logging.debug('Importing RDF/NTriples file %s into HBase' %(input_file))
+# patch the ntriples.Literal class
+class SimpleLiteral(ntriples.Node):
+	def __new__(cls, lit, lang=None, dtype=None):
+		# Note that the parsed object value in the default implementation is 
+		# encoded as follows: '@LANGUAGE ^^DATATYPE" VALUE'
+		# For example:
+		#  http://dbpedia.org/resource/Hildegarde_Naughton ... URI
+		#  fi None Galway ... 'Galway'@fi
+		#  None http://www.w3.org/2001/XMLSchema#int 14 ... '14'^^<http://www.w3.org/2001/XMLSchema#int>
+		
+		# n = str(lang) + ' ' + str(dtype) + ' ' + lit
+		return unicode.__new__(cls, lit)
 	
-	# Set the node handlers
-	ntriples.URI = MyURI
-	ntriples.bNode = MybNode
-	ntriples.Literal = MyLiteral
+ntriples.Literal = SimpleLiteral
+# END OF patch the ntriples.Literal class
 
-	# The sink must have a "triple" method.
-	# It'll automatically call one of the handlers for each term
-	# and then pass the result as sink.triple(subj, pred, objt).
-	parser = ntriples.NTriplesParser(sink)
+class HBaseSink(ntriples.Sink): 
+	def __init__(self): 
+		self.length = 0
 
-	# The parse method takes a file; parsestring takes a str.
+	def triple(self, s, p, o): 
+		self.length += 1
+		if DEBUG: logging.debug('%s %s %s' %(s, p, o)) 
+
+def import_data_file(input_file):
+	if DEBUG: logging.debug('Importing RDF/NTriples from file %s into HBase' %(input_file))
+	nt_parser = ntriples.NTriplesParser(sink=HBaseSink())
 	f = open(input_file)
-	sink = parser.parse(f)
+	sink = nt_parser.parse(f)
 	f.close()
+	logging.info('Imported %d triples.' %(sink.length))
 	
-	# query = urllib2.unquote(query)
-	# try:
-	# 	p = {"query": query } 
-	# 	headers = { 'Accept': 'application/sparql-results+json', 'Access-Control-Allow-Origin': '*' }
-	# 	logging.debug('Query to endpoint %s with query\n%s' %(endpoint, query))
-	# 	request = requests.get(endpoint, params=p, headers=headers)
-	# 	logging.debug('Request:\n%s' %(request.url))
-	# 	logging.debug('Result:\n%s' %(json.dumps(request.json, sort_keys=True, indent=4)))
-	# 	self.send_response(200)
-	# 	self.send_header('Content-type', 'application/json')
-	# 	self.end_headers()
-	# 	self.wfile.write(json.dumps(request.json))
-	# except:
-	# 	self.send_error(500, 'Something went wrong here on the server side.')
+def import_data_URL(input_url): 
+	if DEBUG: logging.debug('Importing RDF/NTriples from URL %s into HBase' %(input_url))
+	nt_parser = ntriples.NTriplesParser(sink=HBaseSink())
+	u = urllib.urlopen(input_url)
+	sink = nt_parser.parse(u)
+	u.close()
+	logging.info('Imported %d triples.' %(sink.length))
 
 if __name__ == '__main__':
 	try:
 		if len(sys.argv) == 2: 
-			import_data(sys.argv[1])
+			inp = sys.argv[1]
+			if inp[:5] == 'http:':
+				import_data_URL(inp)
+			else:
+				import_data_file(inp)
 		else: print __doc__
 	except Exception, e:
 		logging.error(e)
