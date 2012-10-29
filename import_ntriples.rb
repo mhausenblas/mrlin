@@ -18,5 +18,6 @@ def add_triple(table, g, s, p, o)
   table.put(p)
 end
   
-table = HTable.new(@hbase.configuration, "rdf")
-add_triple(table, "http://abc.com", "http://abc.com/#home", "http://www.w3.org/2000/01/rdf-schema#label", "ABC home")
+# table = HTable.new(@hbase.configuration, "rdf")
+# add_triple(table, "http://abc.com", "http://abc.com/#home", "http://www.w3.org/2000/01/rdf-schema#label", "ABC home")
+puts ARGV[0]
