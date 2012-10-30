@@ -19,9 +19,8 @@ Dig into [RESTful interactions](https://github.com/mhausenblas/mrlin/wiki/RESTfu
 
 ## Usage
 
-I assume you have HBase installed in some directory `HBASE_HOME` and mrlin in some other directory `MRLIN_HOME`.
-
-First let's make sure that Happybase is installed correctly - we will use a [virtualenv](http://pypi.python.org/pypi/virtualenv "virtualenv 1.8.2 : Python Package Index"). You only need to do this once: go to `MRLIN_HOME` and type:
+### Setup
+I assume you have HBase installed in some directory `HBASE_HOME` and mrlin in some other directory `MRLIN_HOME`. First let's make sure that Happybase is installed correctly - we will use a [virtualenv](http://pypi.python.org/pypi/virtualenv "virtualenv 1.8.2 : Python Package Index"). You only need to do this once: go to `MRLIN_HOME` and type:
 
 	$ virtualenv hb
 
@@ -34,11 +33,16 @@ OK, now we're ready to launch mrlin - change to the directory `MRLIN_HOME` and f
 
 	$ source hb/bin/activate
 
-You should see a change in the prompt to something like `(hb)michau@~/Documents/dev/mrlin$` ... and now try to import a simple [RDF NTriples](http://www.w3.org/TR/rdf-testcases/#ntriples) file:
+You should see a change in the prompt to something like `(hb)michau@~/Documents/dev/mrlin$` ... and this means we're good to go!
+
+### Import RDF/NTriples
+To import  [RDF NTriples](http://www.w3.org/TR/rdf-testcases/#ntriples) documents, use the [`mrlin import`](https://raw.github.com/mhausenblas/mrlin/master/mrlin_import.py) script.
+
+First, try to import **a file** from the local filesystem. Note the second parameter (`http://example.org/`), which specifies the target graph URI to import into:
 
 	$ (hb)michau@~/Documents/dev/mrlin$ python mrlin_import.py data/test_0.ntriples http://example.org/
 
-If this works, try to import something bigger, for example:
+If this works, try to import directly from **a URL** `http://dbpedia.org/data/Galway.ntriples`:
 
 	(hb)michau@~/Documents/dev/mrlin$ python mrlin_import.py http://dbpedia.org/data/Galway.ntriples http://dbpedia.org/
 	2012-10-30T08:56:21 Initialized mrlin table.
@@ -53,6 +57,25 @@ If this works, try to import something bigger, for example:
 	2012-10-30T08:56:31  Import speed: 4059.10 triples per sec
 	2012-10-30T08:56:31 ==========
 	2012-10-30T08:56:31 Imported 233 triples.
+
+Note that you can also import **an entire directory** (mrlin will look for `.nt` and `.ntriples` files):
+	
+	(hb)michau@~/Documents/dev/mrlin$ python mrlin_import.py data/ http://example.org/
+	2012-10-30T03:55:18 Importing RDF/NTriples from directory /Users/michau/Documents/dev/mrlin/data into graph http://example.org/
+	...
+	
+To reset the HBase table (and remove all triples from it), use the [`mrlin utils`](https://raw.github.com/mhausenblas/mrlin/master/mrlin_utils.py) script like so:
+
+	(hb)michau@~/Documents/dev/mrlin$ python mrlin_utils.py clear
+
+### Query
+In order to query the mrlin datastore, use the [`mrlin query`](https://raw.github.com/mhausenblas/mrlin/master/mrlin_query.py) script:
+
+	(hb)michau@~/Documents/dev/mrlin$ python mrlin_query.py Tribes
+	2012-10-30T04:01:22 Scanning table rdf with filter ValueFilter(=,'substring:Tribes')
+	2012-10-30T04:01:22 Key: http://dbpedia.org/resource/Galway - Value: {'O:148': 'u\'"City of the Tribes"\'', 'O:66': 'u\'"City of the Tribes"\'',  ...}
+	2012-10-30T04:01:22 ============
+	2012-10-30T04:01:22 Query took me 0.01 seconds.
 
 ## License
 

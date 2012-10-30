@@ -22,7 +22,7 @@ from mrlin_utils import *
 
 ###############
 # Configuration
-DEBUG = True
+DEBUG = False
 
 if DEBUG:
 	FORMAT = '%(asctime)-0s %(levelname)s %(message)s [at line %(lineno)d]'
