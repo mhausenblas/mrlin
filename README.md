@@ -36,11 +36,11 @@ OK, now we're ready to launch mrlin - change to the directory `MRLIN_HOME` and f
 
 You should see a change in the prompt to something like `(hb)michau@~/Documents/dev/mrlin$` ... and now try to import a simple [RDF NTriples](http://www.w3.org/TR/rdf-testcases/#ntriples) file:
 
-	$ (hb)michau@~/Documents/dev/mrlin$ python import_ntriples.py data/test_0.ntriples http://example.org/
+	$ (hb)michau@~/Documents/dev/mrlin$ python mrlin_import.py data/test_0.ntriples http://example.org/
 
 If this works, try to import something bigger, for example:
 
-	(hb)michau@~/Documents/dev/mrlin$ python import_ntriples.py http://dbpedia.org/data/Galway.ntriples http://dbpedia.org/
+	(hb)michau@~/Documents/dev/mrlin$ python mrlin_import.py http://dbpedia.org/data/Galway.ntriples http://dbpedia.org/
 	2012-10-30T08:56:21 Initialized mrlin table.
 	2012-10-30T08:56:31 Importing RDF/NTriples from URL http://dbpedia.org/data/Galway.ntriples into graph http://dbpedia.org/
 	2012-10-30T08:56:31 == STATUS ==

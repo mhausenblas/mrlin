@@ -5,10 +5,10 @@ mrlin - import
 Imports an RDF/NTriples document concerning a graph URI into an HBase table. 
 See https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase for details.
 
-Usage: python import_ntriples.py path/to/file | URL
+Usage: python mrlin_import.py path/to/file | URL
 Examples: 
-       python import_ntriples.py data/Galway.ntriples http://example.org/
-       python import_ntriples.py http://dbpedia.org/data/Galway.ntriples http://example.org/
+       python mrlin_import.py data/Galway.ntriples http://example.org/
+       python mrlin_import.py http://dbpedia.org/data/Galway.ntriples http://example.org/
 
 Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.
 
