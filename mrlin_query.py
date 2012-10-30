@@ -39,7 +39,7 @@ def query(pattern):
 	starttime = time.time()
 	
 	hbm = HBaseThriftManager(host='localhost', server_port=HBASE_THRIFT_PORT)
-	hbm.scan_table(HBASE_TABLE_RDF, 'ValueFilter(=,\'substring:' + pattern +'\')')
+	hbm.scan_table(HBASE_TABLE_RDF, pattern)
 	
 	deltatime = time.time() - starttime
 	logging.info('='*12)

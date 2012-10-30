@@ -21,7 +21,7 @@ from os import curdir, sep
 
 ###############
 # Configuration
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
 	FORMAT = '%(asctime)-0s %(levelname)s %(message)s [at line %(lineno)d]'
@@ -69,13 +69,20 @@ class HBaseThriftManager(object):
 		else:
 			logging.info('The mrlin table did not exist, no action taken.')
 	
-	def scan_table(self, table_name, filter_str=None):
+	def scan_table(self, table_name, pattern=None):
 		"""Scans a table using filter"""
 		table = self.connection.table(table_name)
-		if filter_str:
-			logging.info('Scanning table %s with filter %s' %(table_name, filter_str))
+		if pattern:
+			if all(ord(c) < 128 for c in pattern): # we have a pure ASCII string
+				p = pattern
+			else: # @@TODO: fix me!!!
+				p = repr(pattern)
+				p = p[1:-1]
+				
+			filter_str = 'ValueFilter(=,\'substring:%s\')' %str(p)
+			logging.info('Scanning table %s with filter %s' %(table_name, str(filter_str)))
 			for key, data in table.scan(filter=filter_str):
-				logging.info('Key: %s - Value: %s' %(key, data))
+				logging.info('Key: %s - Value: %s' %(key, str(data)))
 		else:
 			logging.info('Scanning table %s' %(table_name))
 			for key, data in table.scan():
