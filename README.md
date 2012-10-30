@@ -8,8 +8,8 @@ The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin*
 
 ### Dependencies
 
-* You'll need [Apache HBase](http://hbase.apache.org/) first. I downloaded [`hbase-0.94.2.tar.gz`](http://ftp.heanet.ie/mirrors/www.apache.org/dist/hbase/stable/hbase-0.94.2.tar.gz) and then followed the [quickstart](http://hbase.apache.org/book/quickstart.html) up to section 1.2.3. to set it up.
-* The Python scripts depend on [Happybase](https://github.com/wbolster/happybase) - see also the [docs](http://happybase.readthedocs.org/en/latest/index.html)
+* You'll need [Apache HBase](http://hbase.apache.org/) first. I downloaded [`hbase-0.94.2.tar.gz`](http://ftp.heanet.ie/mirrors/www.apache.org/dist/hbase/stable/hbase-0.94.2.tar.gz) and followed the [quickstart](http://hbase.apache.org/book/quickstart.html) up to section 1.2.3. to set it up.
+* The Python scripts depend on [Happybase](https://github.com/wbolster/happybase). See also the [docs](http://happybase.readthedocs.org/en/latest/index.html) for further details.
 
 ### Representing RDF triples in HBase
 Learn about how mrlin represents [RDF triples in HBase](https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase).
@@ -34,7 +34,7 @@ OK, now we're ready to launch mrlin - change to the directory `MRLIN_HOME` and f
 
 	$ source hb/bin/activate
 
-You should see a change in the prompt to something like `(hb)michau@~/Documents/dev/mrlin$` ... and now try to import a simple RDF NTriples file:
+You should see a change in the prompt to something like `(hb)michau@~/Documents/dev/mrlin$` ... and now try to import a simple [RDF NTriples](http://www.w3.org/TR/rdf-testcases/#ntriples) file:
 
 	$ (hb)michau@~/Documents/dev/mrlin$ python import_ntriples.py data/test_0.ntriples http://example.org/
 

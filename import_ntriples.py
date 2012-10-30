@@ -136,6 +136,7 @@ class HBaseSink(ntriples.Sink):
 # CLI auxilary methods
 
 def import_data(ntriples_doc, graph_uri):
+	starttime = time.time()
 	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(method=HBASE_METHOD_THRIFT, server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
 	
 	# sniffing input provided - this is really a very naive way of doing this
@@ -148,8 +149,9 @@ def import_data(ntriples_doc, graph_uri):
 		
 	sink = nt_parser.parse(src)
 	src.close()
+	deltatime = time.time() - starttime
 	logging.info('='*12)
-	logging.info('Imported %d triples.' %(sink.length))
+	logging.info('Imported %d triples in %.2f seconds.' %(sink.length, deltatime))
 
 #############
 # Main script
