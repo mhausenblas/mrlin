@@ -38,6 +38,7 @@ else:
 
 HBASE_METHOD_REST = 'REST'
 HBASE_METHOD_THRIFT = 'THRIFT'
+HBASE_BATCH_SIZE = 100
 
 # patch the ntriples.Literal class
 class SimpleLiteral(ntriples.Node):
@@ -70,6 +71,7 @@ class HBaseSink(ntriples.Sink):
 		if self.method == HBASE_METHOD_THRIFT: # prepare RDF table in HBase using Thrift interface
 			self.hbm = HBaseThriftManager(host='localhost', server_port=self.server_port)
 			self.hbm.init()
+			self.batch = self.hbm.connection.table('rdf').batch()
 	
 	def triple(self, s, p, o): 
 		"""Processes one triple as arriving in the sink."""
@@ -83,7 +85,9 @@ class HBaseSink(ntriples.Sink):
 		
 		if DEBUG: logging.debug('Adding triple #%s: %s %s %s' %(self.length, s, p, o))
 		
-		if self.length % 100 == 0: # we have 100 triples processed, try to estimate import speed
+		if self.length % HBASE_BATCH_SIZE == 0: # we have $batch_size triples processed, send batch and show stats
+			self.batch.send()
+			self.batch = self.hbm.connection.table('rdf').batch()
 			self.time_delta = time.time() - self.starttime
 			self.starttime = time.time()
 			logging.info('== STATUS ==')
@@ -97,7 +101,7 @@ class HBaseSink(ntriples.Sink):
 	
 	def add_row_thrift(self, g, s, p, o):
 		"""Inserts an RDF triple as a row with subject as key using the Thrift interface via Happybase."""
-		table = self.hbm.connection.table('rdf')
+		# table = self.hbm.connection.table('rdf')
 		
 		# make sure to store each property-object pair in its own column -
 		# for details see https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase
@@ -106,7 +110,7 @@ class HBaseSink(ntriples.Sink):
 		else:
 			self.property_counter[s] = 1
 			
-		table.put(s, {	'G:': g,
+		self.batch.put(s, {	'G:': g,
 						'P:' + str(self.property_counter[s]) : p,
 						'O:' + str(self.property_counter[s]) : repr(o) })
 	
@@ -144,8 +148,8 @@ def import_data(ntriples_doc, graph_uri):
 		
 	sink = nt_parser.parse(src)
 	src.close()
-	logging.info('===\nImported %d triples.' %(sink.length))
-
+	logging.info('='*10)
+	logging.info('Imported %d triples.' %(sink.length))
 
 #############
 # Main script
