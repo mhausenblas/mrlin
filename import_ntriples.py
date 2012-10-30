@@ -17,13 +17,12 @@ Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache Lic
 @status: init
 """
 
-import sys, logging, datetime, time, urllib, urllib2, json, requests, urlparse, ntriples, base64, happybase
-from os import curdir, sep
+import sys, os, logging, datetime, time, urllib, urllib2, json, requests, urlparse, ntriples, base64, happybase
 from mrlin_utils import *
 
 ###############
 # Configuration
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
 	FORMAT = '%(asctime)-0s %(levelname)s %(message)s [at line %(lineno)d]'
@@ -90,10 +89,18 @@ class HBaseSink(ntriples.Sink):
 			self.starttime = time.time()
 			logging.info('== STATUS ==')
 			logging.info(' Time elapsed since last checkpoint:  %.2f sec' %(self.time_delta))
-			logging.info(' Import speed: %.2f triples per sec' %(100/self.time_delta))
+			logging.info(' Import speed: %.2f triples per sec' %(HBASE_BATCH_SIZE/self.time_delta))
 		 
 		self.add_row_thrift(g=self.graph_uri,s=s,p=p,o=o)
 	
+	def wrapup(self):
+		self.batch.send()
+		self.time_delta = time.time() - self.starttime
+		self.starttime = time.time()
+		logging.info('== FINAL STATUS ==')
+		logging.info(' Time elapsed since last checkpoint:  %.2f sec' %(self.time_delta))
+		logging.info(' Import speed: %.2f triples per sec' %(HBASE_BATCH_SIZE/self.time_delta))
+		
 	def add_row_thrift(self, g, s, p, o):
 		"""Inserts an RDF triple as a row with subject as key using the Thrift interface via Happybase."""
 		# make sure to store each property-object pair in its own column -
@@ -111,23 +118,47 @@ class HBaseSink(ntriples.Sink):
 #######################
 # CLI auxilary methods
 
-def import_data(ntriples_doc, graph_uri):
+def import_ntriples(source, graph_uri='http://example.org'):
+	"""Imports RDF/NTriples from directory, single file or URL."""
 	starttime = time.time()
-	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
+	imported_triples = 0
 	
-	# sniffing input provided - this is really a very naive way of doing this
-	if ntriples_doc[:5] == 'http:':
-		src = urllib.urlopen(ntriples_doc)
-		logging.info('Importing RDF/NTriples from URL %s into graph %s' %(ntriples_doc, graph_uri))
-	else:
-		src = open(ntriples_doc)
-		logging.info('Importing RDF/NTriples from file %s into graph %s' %(ntriples_doc, graph_uri))
+	if os.path.isdir(source): # we have a directory in the local file system with RDF/NTriples files
+		logging.info('Importing RDF/NTriples from directory %s into graph %s' %(os.path.abspath(source), graph_uri))
+		logging.info('='*12)
+		imported_triples = _import_directory(source, graph_uri=graph_uri)
+	elif source[:5] == 'http:': # we have a URL where we get the RDF/NTriples file from
+		logging.info('Importing RDF/NTriples from URL %s into graph %s' %(source, graph_uri))
+		logging.info('='*12)
+		imported_triples = _import_data(src = urllib.urlopen(source), graph_uri=graph_uri)
+	else: # we have a single RDF/NTriples file from the local file system
+		logging.info('Importing RDF/NTriples from file %s into graph %s' %(source, graph_uri))
+		logging.info('='*12)
+		imported_triples = _import_data(src = open(source), graph_uri=graph_uri)
 		
-	sink = nt_parser.parse(src)
-	src.close()
 	deltatime = time.time() - starttime
 	logging.info('='*12)
-	logging.info('Imported %d triples in %.2f seconds.' %(sink.length, deltatime))
+	logging.info('Imported %d triples in %.2f seconds.' %(imported_triples, deltatime))
+	
+
+def _import_directory(src_dir, graph_uri):
+	"""Imports RDF/NTriples from directory."""
+	imported_triples = 0
+	for dirname, dirnames, filenames in os.walk(src_dir):
+		for filename in filenames:
+			if filename.endswith(('nt','ntriples')):
+				logging.info('Importing RDF/NTriples from file %s into graph %s' %(filename, graph_uri))
+				imported_triples += _import_data(src = urllib.urlopen(os.path.join(src_dir, filename)), graph_uri=graph_uri)
+	return imported_triples
+
+def _import_data(src, graph_uri):
+	"""Imports RDF/NTriples from a single source, either local file or via URL."""
+	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
+	sink = nt_parser.parse(src)
+	sink.wrapup() # needed as the number of triples can be smaller than batch size (!)
+	src.close()
+	return sink.length
+
 
 #############
 # Main script
@@ -137,7 +168,7 @@ if __name__ == '__main__':
 		if len(sys.argv) == 3: 
 			inp = sys.argv[1]
 			graph_uri = sys.argv[2]
-			import_data(inp, graph_uri)
+			import_ntriples(inp, graph_uri)
 		else: print __doc__
 	except Exception, e:
 		logging.error(e)
