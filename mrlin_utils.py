@@ -69,7 +69,18 @@ class HBaseThriftManager(object):
 		else:
 			logging.info('The mrlin table did not exist, no action taken.')
 	
-
+	def scan_table(self, table_name, filter_str=None):
+		"""Scans a table using filter"""
+		table = self.connection.table(table_name)
+		if filter_str:
+			logging.info('Scanning table %s with filter %s' %(table_name, filter_str))
+			for key, data in table.scan(filter=filter_str):
+				logging.info('Key: %s - Value: %s' %(key, data))
+		else:
+			logging.info('Scanning table %s' %(table_name))
+			for key, data in table.scan():
+				logging.info('Key: %s - Value: %s' %(key, data))
+	
 
 #############
 # Main script
