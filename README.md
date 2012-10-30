@@ -2,14 +2,14 @@
 
 > ...because it's magic
 
-The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin**ked Data (hence the name). In the following I'm going to show you first to how to use HBase to store Linked Data with RDF and then how to use Hadoop to do execute MapReduce jobs.
+The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin**ked Data - hence the name. In the following I'm going to show you first to how to use HBase to store Linked Data with RDF and then how to use Hadoop to execute MapReduce jobs.
 
 ## Background
 
 ### Dependencies
 
 * You'll need [Apache HBase](http://hbase.apache.org/) first. I downloaded [`hbase-0.94.2.tar.gz`](http://ftp.heanet.ie/mirrors/www.apache.org/dist/hbase/stable/hbase-0.94.2.tar.gz) and followed the [quickstart](http://hbase.apache.org/book/quickstart.html) up to section 1.2.3. to set it up.
-* The Python scripts depend on [Happybase](https://github.com/wbolster/happybase). See also the [docs](http://happybase.readthedocs.org/en/latest/index.html) for further details.
+* The mrlin Python scripts depend on [Happybase](https://github.com/wbolster/happybase). See also the [docs](http://happybase.readthedocs.org/en/latest/index.html) for further details.
 
 ### Representing RDF triples in HBase
 Learn about how mrlin represents [RDF triples in HBase](https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase).
