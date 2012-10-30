@@ -6,7 +6,7 @@ Imports an RDF/NTriples document concerning a graph URI
 into an HBase table with the following schema: 
 create 'rdf', 'G', 'P', 'O'.
 
-Usage: python import_ntriples.py path/to/file or URL
+Usage: python import_ntriples.py path/to/file | URL
 Examples: 
        python import_ntriples.py data/Galway.ntriples http://example.org/
        python import_ntriples.py http://dbpedia.org/data/Galway.ntriples http://example.org/
@@ -18,12 +18,13 @@ Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache Lic
 @status: init
 """
 
-import sys, logging, datetime, urllib, urllib2, json, requests, urlparse, ntriples, base64, happybase
+import sys, logging, datetime, time, urllib, urllib2, json, requests, urlparse, ntriples, base64, happybase
 from os import curdir, sep
+from mrlin_utils import *
 
 ###############
 # Configuration
-DEBUG = True
+DEBUG = False
 
 if DEBUG:
 	FORMAT = '%(asctime)-0s %(levelname)s %(message)s [at line %(lineno)d]'
@@ -32,9 +33,6 @@ else:
 	FORMAT = '%(asctime)-0s %(message)s'
 	logging.basicConfig(level=logging.INFO, format=FORMAT, datefmt='%Y-%m-%dT%I:%M:%S')
 
-HBASE_TABLE_RDF = 'rdf'
-HBASE_STARGATE_PORT = 9191
-HBASE_THRIFT_PORT = 9191
 
 #################################
 # mrlin HBase interfacing classes
@@ -68,11 +66,31 @@ class HBaseSink(ntriples.Sink):
 		self.server_port = server_port
 		self.graph_uri = graph_uri
 		self.property_counter = {}
+		self.starttime = time.time()
+		self.time_delta = 0
+		if self.method == HBASE_METHOD_THRIFT: # prepare RDF table in HBase using Thrift interface
+			self.hbm = HBaseThriftManager(host='localhost', server_port=self.server_port)
+			self.hbm.init()
 	
 	def triple(self, s, p, o): 
 		"""Processes one triple as arriving in the sink."""
+		if self.length == 0 : # we're starting the import task, source is ready
+			self.time_delta = time.time() - self.starttime
+			self.starttime = time.time()
+			logging.info('== STATUS ==')
+			logging.info(' Time to retrieve source: %.2f sec' %(self.time_delta))
+		
 		self.length += 1
-		if DEBUG: logging.debug('Adding %s %s %s' %(s, p, o)) 
+		
+		if DEBUG: logging.debug('Adding triple #%s: %s %s %s' %(self.length, s, p, o))
+		
+		if self.length % 100 == 0: # we have 100 triples processed, try to estimate import speed
+			self.time_delta = time.time() - self.starttime
+			self.starttime = time.time()
+			logging.info('== STATUS ==')
+			logging.info(' Time elapsed since last checkpoint:  %.2f sec' %(self.time_delta))
+			logging.info(' Import speed: %.2f triples per sec' %(100/self.time_delta))
+		 
 		if self.method == HBASE_METHOD_REST:
 			self.add_row_rest(g=self.graph_uri,s=s,p=p,o=o)
 		elif self.method == HBASE_METHOD_THRIFT:
@@ -80,8 +98,7 @@ class HBaseSink(ntriples.Sink):
 	
 	def add_row_thrift(self, g, s, p, o):
 		"""Inserts an RDF triple as a row with subject as key using the Thrift interface via Happybase."""
-		connection = happybase.Connection(host='localhost', port=self.server_port)
-		table = connection.table('rdf')
+		table = self.hbm.connection.table('rdf')
 		
 		# make sure to store each property-object pair in its own column -
 		# for details see https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase
@@ -92,35 +109,25 @@ class HBaseSink(ntriples.Sink):
 			
 		table.put(s, {	'G:': g,
 						'P:' + str(self.property_counter[s]) : p,
-						'O:' + str(self.property_counter[s]) : o })
-		
-		# row = table.row('row-key')
-		# print row['family:qual1']  # prints 'value1'
-		# 
-		# for key, data in table.rows(['row-key-1', 'row-key-2']):
-		#     print key, data  # prints row key and data for each row
-		# 
-		# for key, data in table.scan(row_prefix='row'):
-		#     print key, data  # prints 'value1' and 'value2'
-		# 
-		# row = table.delete('row-key')
-
+						'O:' + str(self.property_counter[s]) : repr(o) })
+	
 	def add_row_rest(self, g, s, p, o):
 		"""Inserts an RDF triple as a row with subject as key using the REST interface via Stargate."""
-		row_key = urllib2.quote(s)
-		headers = { 'Content-Type:': 'text/xml' }
-		url = 'http://localhost:' + str(self.server_port) + '/' + HBASE_TABLE_RDF + '/' + row_key  + '/G'
-		cell_payload = """
-		<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-		<CellSet>
-			<Row key="%s">
-				<Cell column="G:">%s</Cell>
-			</Row>
-		</CellSet>
-		""" %(base64.b64encode(s), base64.b64encode(self.graph_uri))
-		r = requests.post(url, data=cell_payload, headers=headers)
-		if DEBUG: logging.debug('%s' %(r.text)) 
+		# row_key = urllib2.quote(s)
+		# headers = { 'Content-Type:': 'text/xml' }
+		# url = 'http://localhost:' + str(self.server_port) + '/' + HBASE_TABLE_RDF + '/' + row_key  + '/G'
+		# cell_payload = """
+		# <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		# <CellSet>
+		# 	<Row key="%s">
+		# 		<Cell column="G:">%s</Cell>
+		# 	</Row>
+		# </CellSet>
+		# """ %(base64.b64encode(s), base64.b64encode(self.graph_uri))
+		# r = requests.post(url, data=cell_payload, headers=headers)
+		# if DEBUG: logging.debug('%s' %(r.text)) 
 	
+
 
 #######################
 # CLI auxilary methods
@@ -138,7 +145,7 @@ def import_data(ntriples_doc, graph_uri):
 		
 	sink = nt_parser.parse(src)
 	src.close()
-	logging.info('Imported %d triples.' %(sink.length))
+	logging.info('===\nImported %d triples.' %(sink.length))
 
 
 #############

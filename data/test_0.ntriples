@@ -1,2 +1,3 @@
 <http://example.org/> <http://example.org/property1> <http://example.org/value> .
 <http://example.org/> <http://example.org/property2> "abc" .
+<http://example.org/> <http://www.w3.org/2000/01/rdf-schema#label> "\u0413\u043E\u043B\u0443\u044D\u0439"@ru .
