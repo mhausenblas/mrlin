@@ -1,1 +1,2 @@
-<http://example.org/> <http://example.org/property> <http://example.org/value> .
+<http://example.org/> <http://example.org/property1> <http://example.org/value> .
+<http://example.org/> <http://example.org/property2> "abc" .

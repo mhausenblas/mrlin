@@ -18,7 +18,7 @@ Copyright (c) 2012 The Apache Software Foundation, Licensed under the Apache Lic
 @status: init
 """
 
-import sys, logging, datetime, urllib, urllib2, json, requests, urlparse, ntriples, base64
+import sys, logging, datetime, urllib, urllib2, json, requests, urlparse, ntriples, base64, happybase
 from os import curdir, sep
 
 ###############
@@ -34,9 +34,13 @@ else:
 
 HBASE_TABLE_RDF = 'rdf'
 HBASE_STARGATE_PORT = 9191
+HBASE_THRIFT_PORT = 9191
 
 #################################
 # mrlin HBase interfacing classes
+
+HBASE_METHOD_REST = 'REST'
+HBASE_METHOD_THRIFT = 'THRIFT'
 
 # patch the ntriples.Literal class
 class SimpleLiteral(ntriples.Node):
@@ -56,22 +60,56 @@ ntriples.Literal = SimpleLiteral
 
 class HBaseSink(ntriples.Sink): 
 	"""Represents a sink for HBase."""
-	def __init__(self, stargate_port, graph_uri): 
-		"""Inits the HBase sink."""
+	def __init__(self, method, server_port, graph_uri): 
+		"""Inits the HBase sink. The method must either be HBASE_METHOD_REST or HBASE_METHOD_THRIFT 
+		   and the server_port must be set to the port Stargate or the Thrift server is listening."""
 		self.length = 0
-		self.stargate_port = stargate_port
+		self.method = method
+		self.server_port = server_port
 		self.graph_uri = graph_uri
-
+		self.property_counter = {}
+	
 	def triple(self, s, p, o): 
 		"""Processes one triple as arriving in the sink."""
 		self.length += 1
-		if DEBUG: logging.debug('%s %s %s' %(s, p, o)) 
+		if DEBUG: logging.debug('Adding %s %s %s' %(s, p, o)) 
+		if self.method == HBASE_METHOD_REST:
+			self.add_row_rest(g=self.graph_uri,s=s,p=p,o=o)
+		elif self.method == HBASE_METHOD_THRIFT:
+			self.add_row_thrift(g=self.graph_uri,s=s,p=p,o=o)
+	
+	def add_row_thrift(self, g, s, p, o):
+		"""Inserts an RDF triple as a row with subject as key using the Thrift interface via Happybase."""
+		connection = happybase.Connection(host='localhost', port=self.server_port)
+		table = connection.table('rdf')
+		
+		# make sure to store each property-object pair in its own column -
+		# for details see https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase
+		if s in self.property_counter: 
+			self.property_counter[s] += 1
+		else:
+			self.property_counter[s] = 1
+			
+		table.put(s, {	'G:': g,
+						'P:' + str(self.property_counter[s]) : p,
+						'O:' + str(self.property_counter[s]) : o })
+		
+		# row = table.row('row-key')
+		# print row['family:qual1']  # prints 'value1'
+		# 
+		# for key, data in table.rows(['row-key-1', 'row-key-2']):
+		#     print key, data  # prints row key and data for each row
+		# 
+		# for key, data in table.scan(row_prefix='row'):
+		#     print key, data  # prints 'value1' and 'value2'
+		# 
+		# row = table.delete('row-key')
 
-	def add_row(self, g, s, p, o):
-		"""Inserts one RDF triple as a row with subject as key."""
+	def add_row_rest(self, g, s, p, o):
+		"""Inserts an RDF triple as a row with subject as key using the REST interface via Stargate."""
 		row_key = urllib2.quote(s)
 		headers = { 'Content-Type:': 'text/xml' }
-		url = 'http://localhost:' + self.stargate_port + '/' + HBASE_TABLE_RDF + '/' + row_key  + '/G'
+		url = 'http://localhost:' + str(self.server_port) + '/' + HBASE_TABLE_RDF + '/' + row_key  + '/G'
 		cell_payload = """
 		<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 		<CellSet>
@@ -82,25 +120,24 @@ class HBaseSink(ntriples.Sink):
 		""" %(base64.b64encode(s), base64.b64encode(self.graph_uri))
 		r = requests.post(url, data=cell_payload, headers=headers)
 		if DEBUG: logging.debug('%s' %(r.text)) 
-
+	
 
 #######################
 # CLI auxilary methods
 
-def import_data_file(input_file, graph_uri):
-	if DEBUG: logging.debug('Importing RDF/NTriples from file %s into HBase' %(input_file))
-	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(HBASE_STARGATE_PORT, graph_uri))
-	f = open(input_file)
-	sink = nt_parser.parse(f)
-	f.close()
-	logging.info('Imported %d triples.' %(sink.length))
+def import_data(ntriples_doc, graph_uri):
+	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(method=HBASE_METHOD_THRIFT, server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
 	
-def import_data_URL(input_url, graph_uri): 
-	if DEBUG: logging.debug('Importing RDF/NTriples from URL %s into HBase' %(input_url))
-	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(HBASE_STARGATE_PORT, graph_uri))
-	u = urllib.urlopen(input_url)
-	sink = nt_parser.parse(u)
-	u.close()
+	# sniffing input provided - this is really a very naive way of doing this
+	if ntriples_doc[:5] == 'http:':
+		src = urllib.urlopen(ntriples_doc)
+		logging.info('Importing RDF/NTriples from URL %s into graph %s' %(ntriples_doc, graph_uri))
+	else:
+		src = open(ntriples_doc)
+		logging.info('Importing RDF/NTriples from file %s into graph %s' %(ntriples_doc, graph_uri))
+		
+	sink = nt_parser.parse(src)
+	src.close()
 	logging.info('Imported %d triples.' %(sink.length))
 
 
@@ -112,10 +149,7 @@ if __name__ == '__main__':
 		if len(sys.argv) == 3: 
 			inp = sys.argv[1]
 			graph_uri = sys.argv[2]
-			if inp[:5] == 'http:':
-				import_data_URL(inp, graph_uri)
-			else:
-				import_data_file(inp, graph_uri)
+			import_data(inp, graph_uri)
 		else: print __doc__
 	except Exception, e:
 		logging.error(e)
