@@ -148,7 +148,7 @@ def import_data(ntriples_doc, graph_uri):
 		
 	sink = nt_parser.parse(src)
 	src.close()
-	logging.info('='*10)
+	logging.info('='*12)
 	logging.info('Imported %d triples.' %(sink.length))
 
 #############
