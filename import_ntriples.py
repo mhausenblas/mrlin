@@ -36,8 +36,6 @@ else:
 #################################
 # mrlin HBase interfacing classes
 
-HBASE_METHOD_REST = 'REST'
-HBASE_METHOD_THRIFT = 'THRIFT'
 HBASE_BATCH_SIZE = 100
 
 # patch the ntriples.Literal class
@@ -58,20 +56,20 @@ ntriples.Literal = SimpleLiteral
 
 class HBaseSink(ntriples.Sink): 
 	"""Represents a sink for HBase."""
-	def __init__(self, method, server_port, graph_uri): 
-		"""Inits the HBase sink. The method must either be HBASE_METHOD_REST or HBASE_METHOD_THRIFT 
-		   and the server_port must be set to the port Stargate or the Thrift server is listening."""
+	def __init__(self, server_port, graph_uri): 
+		"""Inits the HBase sink. The server_port must be set to the port the Thrift server is listening.
+		   See http://wiki.apache.org/hadoop/Hbase/ThriftApi for details.
+		"""
 		self.length = 0
-		self.method = method
-		self.server_port = server_port
-		self.graph_uri = graph_uri
+		self.server_port = server_port # Thrift server port
+		self.graph_uri = graph_uri # the target graph URI for the document
 		self.property_counter = {}
 		self.starttime = time.time()
 		self.time_delta = 0
-		if self.method == HBASE_METHOD_THRIFT: # prepare RDF table in HBase using Thrift interface
-			self.hbm = HBaseThriftManager(host='localhost', server_port=self.server_port)
-			self.hbm.init()
-			self.batch = self.hbm.connection.table('rdf').batch()
+		# prepare the RDF table in HBase using Thrift interface:
+		self.hbm = HBaseThriftManager(host='localhost', server_port=self.server_port)
+		self.hbm.init()
+		self.batch = self.hbm.connection.table('rdf').batch()
 	
 	def triple(self, s, p, o): 
 		"""Processes one triple as arriving in the sink."""
@@ -94,15 +92,10 @@ class HBaseSink(ntriples.Sink):
 			logging.info(' Time elapsed since last checkpoint:  %.2f sec' %(self.time_delta))
 			logging.info(' Import speed: %.2f triples per sec' %(100/self.time_delta))
 		 
-		if self.method == HBASE_METHOD_REST:
-			self.add_row_rest(g=self.graph_uri,s=s,p=p,o=o)
-		elif self.method == HBASE_METHOD_THRIFT:
-			self.add_row_thrift(g=self.graph_uri,s=s,p=p,o=o)
+		self.add_row_thrift(g=self.graph_uri,s=s,p=p,o=o)
 	
 	def add_row_thrift(self, g, s, p, o):
 		"""Inserts an RDF triple as a row with subject as key using the Thrift interface via Happybase."""
-		# table = self.hbm.connection.table('rdf')
-		
 		# make sure to store each property-object pair in its own column -
 		# for details see https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase
 		if s in self.property_counter: 
@@ -114,30 +107,13 @@ class HBaseSink(ntriples.Sink):
 						'P:' + str(self.property_counter[s]) : p,
 						'O:' + str(self.property_counter[s]) : repr(o) })
 	
-	def add_row_rest(self, g, s, p, o):
-		"""Inserts an RDF triple as a row with subject as key using the REST interface via Stargate."""
-		# row_key = urllib2.quote(s)
-		# headers = { 'Content-Type:': 'text/xml' }
-		# url = 'http://localhost:' + str(self.server_port) + '/' + HBASE_TABLE_RDF + '/' + row_key  + '/G'
-		# cell_payload = """
-		# <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-		# <CellSet>
-		# 	<Row key="%s">
-		# 		<Cell column="G:">%s</Cell>
-		# 	</Row>
-		# </CellSet>
-		# """ %(base64.b64encode(s), base64.b64encode(self.graph_uri))
-		# r = requests.post(url, data=cell_payload, headers=headers)
-		# if DEBUG: logging.debug('%s' %(r.text)) 
-	
-
 
 #######################
 # CLI auxilary methods
 
 def import_data(ntriples_doc, graph_uri):
 	starttime = time.time()
-	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(method=HBASE_METHOD_THRIFT, server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
+	nt_parser = ntriples.NTriplesParser(sink=HBaseSink(server_port=HBASE_THRIFT_PORT, graph_uri=graph_uri))
 	
 	# sniffing input provided - this is really a very naive way of doing this
 	if ntriples_doc[:5] == 'http:':
