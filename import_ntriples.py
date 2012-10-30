@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 """
-mrlin - tools - import
+mrlin - import
 
-Imports an RDF/NTriples document concerning a graph URI
-into an HBase table with the following schema: 
-create 'rdf', 'G', 'P', 'O'.
+Imports an RDF/NTriples document concerning a graph URI into an HBase table. 
+See https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase for details.
 
 Usage: python import_ntriples.py path/to/file | URL
 Examples: 
