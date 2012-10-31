@@ -83,6 +83,10 @@ In order to query the mrlin datastore in HBase, use the [`mrlin query`](https://
 
 *TBD*
 
+* setup in virtual env: `source hb/bin/activate` then `pip install mrjob`
+* `cp .mrjob.conf ~` before launch
+* run `python mrlin_mr.py README.md`
+
 ## License
 
 All artifacts in this repository are licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) Software License.
