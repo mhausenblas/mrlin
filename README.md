@@ -2,14 +2,16 @@
 
 > ...because it's magic
 
-The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin**ked Data - hence the name. In the following I'm going to show you first to how to use HBase to store Linked Data with RDF and then how to use Hadoop to execute MapReduce jobs.
+The basic idea of **mrlin** is to enable **M**ap **R**educe processing of **Lin**ked Data - hence the name. In the following I'm going to show you first to how to use HBase to store Linked Data with RDF, and then how to use Hadoop to run MapReduce jobs.
 
 ## Background
 
 ### Dependencies
 
 * You'll need [Apache HBase](http://hbase.apache.org/) first. I downloaded [`hbase-0.94.2.tar.gz`](http://ftp.heanet.ie/mirrors/www.apache.org/dist/hbase/stable/hbase-0.94.2.tar.gz) and followed the [quickstart](http://hbase.apache.org/book/quickstart.html) up to section 1.2.3. to set it up.
-* The mrlin Python scripts depend on [Happybase](https://github.com/wbolster/happybase). See also the [docs](http://happybase.readthedocs.org/en/latest/index.html) for further details.
+* The mrlin Python scripts depend on:
+ * [Happybase](https://github.com/wbolster/happybase) to manage HBase; see also the [docs](http://happybase.readthedocs.org/en/latest/index.html) for further details.
+ * [mrjob](https://github.com/Yelp/mrjob) to run MapReduce jobs; see also the [docs](http://packages.python.org/mrjob/) for further details.
 
 ### Representing RDF triples in HBase
 Learn about how mrlin represents [RDF triples in HBase](https://github.com/mhausenblas/mrlin/wiki/RDF-in-HBase).
@@ -69,13 +71,17 @@ To reset the HBase table (and remove all triples from it), use the [`mrlin utils
 	(hb)michau@~/Documents/dev/mrlin$ python mrlin_utils.py clear
 
 ### Query
-In order to query the mrlin datastore, use the [`mrlin query`](https://raw.github.com/mhausenblas/mrlin/master/mrlin_query.py) script:
+In order to query the mrlin datastore in HBase, use the [`mrlin query`](https://raw.github.com/mhausenblas/mrlin/master/mrlin_query.py) script:
 
 	(hb)michau@~/Documents/dev/mrlin$ python mrlin_query.py Tribes
 	2012-10-30T04:01:22 Scanning table rdf with filter ValueFilter(=,'substring:Tribes')
 	2012-10-30T04:01:22 Key: http://dbpedia.org/resource/Galway - Value: {'O:148': 'u\'"City of the Tribes"\'', 'O:66': 'u\'"City of the Tribes"\'',  ...}
 	2012-10-30T04:01:22 ============
 	2012-10-30T04:01:22 Query took me 0.01 seconds.
+
+### Running MapReduce jobs
+
+*TBD*
 
 ## License
 
