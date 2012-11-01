@@ -1,0 +1,313 @@
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearRainMm>	"927"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionName>	<http://dbpedia.org/resource/Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@es .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janHumidity>	"82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/date>	"February 2011"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@it .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\u041B\u0438\u0301\u043C\u0435\u0440\u0438\u043A\u00A0\u2014 \u0433\u043E\u0440\u043E\u0434-\u0433\u0440\u0430\u0444\u0441\u0442\u0432\u043E \u0432 \u0418\u0440\u043B\u0430\u043D\u0434\u0438\u0438, \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u043D\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0430\u0445 \u0433\u0440\u0430\u0444\u0441\u0442\u0432 \u041B\u0438\u043C\u0435\u0440\u0438\u043A \u0438 \u041A\u043B\u044D\u0440. \u041A\u0440\u0443\u043F\u043D\u044B\u0439 \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0439 \u0438 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440, \u0442\u0440\u0435\u0442\u0438\u0439 \u043F\u043E \u0447\u0438\u0441\u043B\u0443 \u0436\u0438\u0442\u0435\u043B\u0435\u0439 (70 \u0442\u044B\u0441. ) \u0433\u043E\u0440\u043E\u0434 \u0432 \u0418\u0440\u043B\u0430\u043D\u0434\u0438\u0438."@ru .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/country>	<http://dbpedia.org/resource/Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junHumidity>	"67"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marSnowDays>	"2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Articles_on_towns_and_villages_in_Ireland_possibly_missing_Irish_place_names> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janLowC>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/imageCaption>	"A montage of Limerick. From top, left to right: St. John's Cathedral, King John's Castle, The Clarion Hotel, Riverpoint, Treaty Stone and the Univeristy Concert Hall at the University of Limerick."@en .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Port_cities_and_towns_in_the_Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decSnowDays>	"2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Viking_Age_populated_places> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"\uB9AC\uBA38\uB9AD"@ko .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/maySun>	"179"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/longd>	"-9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick est la troisi\u00E8me ville en population de l'Irlande avec une population de plus de habitants. Elle est situ\u00E9e \u00E0 l'ouest de l'Irlande sur une \u00EEle et le long du fleuve Shannon, dans le comt\u00E9 du m\u00EAme nom. Elle abrite beaucoup de mus\u00E9es et de galeries d'art comme le mus\u00E9e de Hunt, la collection d'autoportraits de l'universit\u00E9 et le mus\u00E9e de la ville de Limerick dont les b\u00E2timents eux-m\u00EAmes sont \u00E0 voir."@fr .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/utcOffset>	"+1"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@pl .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.limerickcity.ie/Library/LocalStudies/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprSnowDays>	"1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/maySnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearHighC>	"14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprRainMm>	"56"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationBlank2Title>	"Urban area"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/pushpinMap>	"Ireland"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick \u2013 miasto w \u015Brodkowo-zachodniej Irlandii, po\u0142o\u017Cony nad estuarium rzeki Shannon, 195 km na zach\u00F3d od Dublina. O\u015Brodek administracyjny hrabstwa Limerick. Trzecie najwi\u0119ksze pod wzgl\u0119dem ludno\u015Bci miasto Republiki Irlandii. Istnieje tu wiele przedsi\u0119biorstw zwi\u0105zanych z rolnictwem, a miasto jest znane z produkcji szynki i bekonu. Jest r\u00F3wnie\u017C o\u015Brodkiem handlowym i uniwersyteckim. Do najwa\u017Cniejszych zabytk\u00F3w nale\u017C\u0105 katedry: St. Mary i St. John oraz zamek kr\u00F3la Jana (King John's Castle) z XII wieku. Z Limerick pochodzi Pat Cox, w Limerick narodzi\u0142 si\u0119 tak\u017Ce zesp\u00F3\u0142 The Cranberries i prawie wszyscy jego muzycy."@pl .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://rdf.freebase.com/ns/m.0fp5z> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febRecordLowC>	"-10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janRecordLowC>	"-11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayRainMm>	"60"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://xmlns.com/foaf/0.1/depiction>	<http://upload.wikimedia.org/wikipedia/commons/4/4c/Limerick_montage2.jpg> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/wikiPageUsesTemplate>	<http://dbpedia.org/resource/Template:Infobox_settlement> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderTitle>	<http://dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\u041B\u0456\u043C\u0435\u0440\u0438\u043A\u00A0\u2014 \u043C\u0456\u0441\u0442\u043E \u0432 \u0406\u0440\u043B\u0430\u043D\u0434\u0456\u0457, \u0449\u043E \u0437\u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C\u0441\u044F \u043D\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0456 \u0433\u0440\u0430\u0444\u0441\u0442\u0432\u0430 \u041B\u0456\u043C\u0435\u0440\u0438\u043A \u0442\u0430 \u041A\u043B\u0435\u0440. \u0412\u0430\u0436\u043B\u0438\u0432\u0438\u0439 \u0442\u043E\u0440\u0433\u043E\u0432\u0438\u0439 \u0442\u0430 \u0430\u0434\u043C\u0456\u043D\u0456\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043D\u0438\u0439 \u0446\u0435\u043D\u0442\u0440. \u0422\u0440\u0435\u0442\u0454 \u0437\u0430 \u0447\u0438\u0441\u0435\u043B\u044C\u043D\u0456\u0441\u0442\u044E \u0436\u0438\u0442\u0435\u043B\u0456\u0432 \u043C\u0456\u0441\u0442\u043E \u0406\u0440\u043B\u0430\u043D\u0434\u0456\u0457 (\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E 90 000 \u0436\u0438\u0442\u0435\u043B\u0456\u0432). \u0423 \u043C\u0456\u0441\u0442\u0456 \u0434\u0456\u0454 \u041B\u0456\u043C\u0435\u0440\u0438\u043A\u0441\u044C\u043A\u0438\u0439 \u0443\u043D\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442, \u0432 \u044F\u043A\u043E\u043C\u0443 \u043D\u0430\u0432\u0447\u0430\u0454\u0442\u044C\u0441\u044F \u0431\u043B\u0438\u0437\u044C\u043A\u043E 17 000 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0456\u0432."@uk .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick (stad)"@nl .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junRainMm>	"63"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/isPartOf>	<http://dbpedia.org/resource/County_Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marRainMm>	"71"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick (Luimneach, cio\u00E8 \"palude deserta\", in irlandese) \u00E8 una citt\u00E0 della Repubblica d'Irlanda, situata nella parte sud-occidentale della nazione, a ridosso della foce del fiume Shannon che la attraversa. \u00C8 capoluogo dell'omonima contea, nella provincia del Munster. Non felicemente stereotipata come citt\u00E0 dei coltelli, pu\u00F2 fregiarsi di un'antica tradizione sportiva: per il rugby, a tal punto che un tipo di azione di gioco si chiama Garryowen come uno dei club della citt\u00E0, ma anche per lo hurling, sport diffusissimo nella nazione. Al 2002, la popolazione dell'area urbana era di 86.998 abitanti, mentre la citt\u00E0 singolarmente contava 54.023 abitanti."@it .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionName>	<http://dbpedia.org/resource/County_Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/coordinatesDisplay>	"inline,title"@en .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Munster> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/utcOffset>	"0"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprSun>	"148"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julMeanC>	"16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julSun>	"142"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augMeanC>	"16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augSun>	"138"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\u5229\u9ED8\u91CC\u514B \uFF08Limerick /\u02C8l\u026Amr\u026Ak/\uFF1B\u611B\u723E\u862D\u8A9E\uFF1A Luimneach\uFF09\u662F\u611B\u723E\u862D\u897F\u90E8\u7684\u4E00\u500B\u57CE\u5E02\uFF0C\u4F4D\u65BC\u9999\u8FB2\u6CB3\u6CB3\u53E3\u3002\u662F\u5229\u9ED8\u91CC\u514B\u90E1\u90E1\u6CBB\u30022006\u5E74\u4EBA\u53E390,778\u4EBA\u3002"@zh .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.vimeo.com/11322307/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/motto>	"''Urbs Antiqua Fuit"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febRecordHighC>	"15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/ns/prov#wasDerivedFrom>	<http://en.wikipedia.org/wiki/Limerick?oldid=494880320> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decLowC>	"4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick on Irlannin kolmanneksi suurin kaupunki. Se sijaitsee Limerickin kreivikunnassa, Munsterin provinssissa L\u00E4nsi-Irlannissa. Limerickin asukasluku on noin 56\u00A0000."@fi .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/singleLine>	"Yes"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janRainMm>	"98"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderName>	<http://dbpedia.org/resource/South_(European_Parliament_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/name>	"Limerick"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayHumidity>	"64"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepMeanC>	"14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augRecordHighC>	"29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febMeanC>	"6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novHumidity>	"81"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augHumidity>	"69"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decMeanC>	"6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionType>	<http://dbpedia.org/resource/List_of_sovereign_states> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junMeanC>	"14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janRecordHighC>	"14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novMeanC>	"8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marHumidity>	"70"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearLowC>	"7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprHumidity>	"65"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@cs .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/ontology/City> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/thumbnail>	<http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Limerick_montage2.jpg/200px-Limerick_montage2.jpg> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@fi .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/City> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julRecordHighC>	"31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick is een stad met circa 54.000 inwoners in het zuidwesten van Ierland. Limerick is de hoofdstad van de graafschap Limerick in de provincie Munster. De stad is het historische centrum van de regio en vervult tevens bepaalde regionale functies voor geheel West-Ierland. De stad ligt aan het estuarium van de Shannon. Deelnemer aan het project Water in Historic City Centres (WIHCC)."@nl .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick es una ciudad capital del Condado de Limerick en la provincia de Munster, en el oeste de la Rep\u00FAblica de Irlanda."@es .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/motto>	"\"There was an ancient city"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"\u5229\u9ED8\u91CC\u514B"@zh .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@pt .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepRecordLowC>	"1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/UniversityTowns> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@hu .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junRecordHighC>	"32"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"\u041B\u0456\u043C\u0435\u0440\u0438\u043A (\u043C\u0456\u0441\u0442\u043E)"@uk .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/imageShield>	"IRL COA Limerick.svg"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"\u041B\u0438\u0301\u043C\u0435\u0440\u0438\u043A\u00A0\u2014 \u0433\u043E\u0440\u043E\u0434-\u0433\u0440\u0430\u0444\u0441\u0442\u0432\u043E \u0432 \u0418\u0440\u043B\u0430\u043D\u0434\u0438\u0438, \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u043D\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0430\u0445 \u0433\u0440\u0430\u0444\u0441\u0442\u0432 \u041B\u0438\u043C\u0435\u0440\u0438\u043A \u0438 \u041A\u043B\u044D\u0440. \u041A\u0440\u0443\u043F\u043D\u044B\u0439 \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0439 \u0438 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440, \u0442\u0440\u0435\u0442\u0438\u0439 \u043F\u043E \u0447\u0438\u0441\u043B\u0443 \u0436\u0438\u0442\u0435\u043B\u0435\u0439 (70 \u0442\u044B\u0441. ) \u0433\u043E\u0440\u043E\u0434 \u0432 \u0418\u0440\u043B\u0430\u043D\u0434\u0438\u0438."@ru .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/settlementType>	"City"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderTitle>	<http://dbpedia.org/resource/European_Parliament> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderTitle>	"LEAs"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\uB9AC\uBA38\uB9AD\uC740 \uC544\uC77C\uB79C\uB4DC\uC758 \uB3C4\uC2DC\uB85C, \uC778\uAD6C\uB294 \uC57D 9\uB9CC 1\uCC9C\uBA85(2002\uB144 \uAE30\uC900)\uC774\uB2E4. \uC11C\uC548\uC5D0 \uC788\uC5B4\uC11C\uC758 \uD56D\uAD6C\uB85C\uC11C \uC911\uC694\uD55C \uC5ED\uD560\uC744 \uD558\uBA70, \uC608\uB85C\uBD80\uD130 \uACF5\uC5C5\uACFC \uC0C1\uC5C5\uC758 \uC911\uC2EC\uC73C\uB85C \uB418\uC5B4 \uC788\uB2E4. \uC81C\uBD84\uC5C5\uC740 \uC544\uC77C\uB79C\uB4DC \uC81C1\uC774\uC9C0\uB9CC \uB18D\uAE30\uAD6C\u00B7\uBCA0\uC774\uCEE8\u00B7\uC720\uC81C\uD488\u00B7\uC591\uC870\uACF5\uC5C5\u00B7\uC5F0\uC5B4\uC7A1\uC774\uB3C4 \uC131\uD558\uB2E4. \uB9AC\uBA38\uB9AD \uC2DC\uC758 \uC11C\uBC29 25\u339E\uC5D0 \uC0C8\uB10C \uACF5\uD56D(Shannon Airport)\uC774 \uC788\uB2E4. \uC774 \uACF5\uD56D\uC740 \uC790\uC720\uACF5\uD56D\uC73C\uB85C\uC11C, \uACF5\uD56D \uC548\uC5D0\uB294 \uC678\uAD6D\uC73C\uB85C\uBD80\uD130\uC758 \uACF5\uC7A5\uC744 \uC720\uCE58\uD558\uACE0 \uC788\uB2E4."@ko .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/motto>	"very fierce in the skills of war\""@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julHighC>	"19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octRecordLowC>	"-1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderTitle>	"Mayor"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augHighC>	"19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/governmentType>	<http://dbpedia.org/resource/Limerick_City_Council> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/PopulatedPlace/areaTotal>	"51.3"^^<http://dbpedia.org/datatype/squareKilometre> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"\u30EA\u30E0\u30EA\u30C3\u30AF"@ja .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novRecordHighC>	"18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayRecordHighC>	"28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://cs.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:University_towns> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janSun>	"49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://el.dbpedia.org/resource/\u039B\u03AF\u03BC\u03B5\u03C1\u03B9\u03BA> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decRecordLowC>	"-8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://pl.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/coordinatesType>	"dim:100000_region:IE"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.opengis.net/gml/_Feature> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janHighC>	"8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/Place> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprRecordHighC>	"22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febHighC>	"9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/ontology/PopulatedPlace> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/utcOffset>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://sw.cyc.com/concept/Mx4rvnyhJZwpEbGdrcN5Y29ycA> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/ontology/Settlement> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick (Luimneach en ga\u00E8lic irland\u00E8s, que v\u00E9 de Lom na nEach - lloc obert als cavalls) \u00E9s la tercera ciutat de la Rep\u00FAblica d'Irlanda i la quarta ciutat m\u00E9s gran de tota l'illa despr\u00E9s de Dubl\u00EDn, Belfast i Cork, en aquest ordre. Es tracta de la ciutat principal i el centre administratiu del comtat de Limerick i la segona ciutat m\u00E9s gran de la prov\u00EDncia de Munster. L'\u00E0rea metropolitana arriba als 93.251 habitants."@ca .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marHighC>	"11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octHumidity>	"77"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@de .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/metricFirst>	"Yes"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/latd>	"53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novHighC>	"10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novLowC>	"5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marLowC>	"4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/blankName>	<http://dbpedia.org/resource/Vehicle_registration_plates_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick (Irlande)"@fr .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/hasPhotoCollection>	<http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decHighC>	"9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://sws.geonames.org/2962943/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderTitle>	<http://dbpedia.org/resource/D%C3%A1il_%C3%89ireann> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febSnowDays>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearRecordLowC>	"-11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marRecordLowC>	"-8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/establishedTitle>	"Founded"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janSnowDays>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julRecordLowC>	"5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayRecordLowC>	"-1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationBlank>	"57106"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprMeanC>	"9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decHumidity>	"84"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marMeanC>	"7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/janMeanC>	"5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayMeanC>	"11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octMeanC>	"11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepHighC>	"17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junSun>	"154"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/imageFlag>	"Limerick kolory.png"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick is a city in the Mid-West or Shannon Region of Ireland. It is the fifth most populous city on the island of Ireland and when taking the extra-municipal suburbs into account, Limerick is the third largest urban area in the Republic of Ireland, with a population of 91,454. Limerick is also the second-largest city in the province of Munster, an area that constitutes the midwest and southwest of Ireland. The city is built on several curves and islands of the River Shannon, which spreads into an estuary shortly downriver from Limerick. Road infrastructure features four main crossing points near the city centre (an additional river tunnel to the west of the three bridges opened in July 2010). Limerick is one of the constituent cities of the Cork-Limerick-Galway corridor, which has a population of 1 million."@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/isPartOf>	<http://dbpedia.org/resource/Munster> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderName>	<http://dbpedia.org/resource/Limerick_(D%C3%A1il_%C3%89ireann_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationBlank1Title>	"City"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionName>	<http://dbpedia.org/resource/Munster> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick v\u00E1ros \u00CDrorsz\u00E1g d\u00E9lnyugati r\u00E9sz\u00E9n."@hu .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Local_administrative_units_of_the_Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/establishedDate>	"812"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick v\u00E1ros \u00CDrorsz\u00E1g d\u00E9lnyugati r\u00E9sz\u00E9n."@hu .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novSnowDays>	"0"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepRecordHighC>	"26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@no .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick \u2013 miasto w \u015Brodkowo-zachodniej Irlandii, po\u0142o\u017Cony nad estuarium rzeki Shannon, 195 km na zach\u00F3d od Dublina. O\u015Brodek administracyjny hrabstwa Limerick. Trzecie najwi\u0119ksze pod wzgl\u0119dem ludno\u015Bci miasto Republiki Irlandii. Istnieje tu wiele przedsi\u0119biorstw zwi\u0105zanych z rolnictwem, a miasto jest znane z produkcji szynki i bekonu. Jest r\u00F3wnie\u017C o\u015Brodkiem handlowym i uniwersyteckim. Do najwa\u017Cniejszych zabytk\u00F3w nale\u017C\u0105 katedry: St. Mary i St."@pl .
+<http://dbpedia.org/resource/Limerick>	<http://xmlns.com/foaf/0.1/isPrimaryTopicOf>	<http://en.wikipedia.org/wiki/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderTitle>	"European Parliament"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decRecordHighC>	"15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marRecordHighC>	"20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.lit.ie/> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2003/01/geo/wgs84_pos#lat>	"52.6652"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"\u041B\u0456\u043C\u0435\u0440\u0438\u043A\u00A0\u2014 \u043C\u0456\u0441\u0442\u043E \u0432 \u0406\u0440\u043B\u0430\u043D\u0434\u0456\u0457, \u0449\u043E \u0437\u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C\u0441\u044F \u043D\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0456 \u0433\u0440\u0430\u0444\u0441\u0442\u0432\u0430 \u041B\u0456\u043C\u0435\u0440\u0438\u043A \u0442\u0430 \u041A\u043B\u0435\u0440. \u0412\u0430\u0436\u043B\u0438\u0432\u0438\u0439 \u0442\u043E\u0440\u0433\u043E\u0432\u0438\u0439 \u0442\u0430 \u0430\u0434\u043C\u0456\u043D\u0456\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043D\u0438\u0439 \u0446\u0435\u043D\u0442\u0440. \u0422\u0440\u0435\u0442\u0454 \u0437\u0430 \u0447\u0438\u0441\u0435\u043B\u044C\u043D\u0456\u0441\u0442\u044E \u0436\u0438\u0442\u0435\u043B\u0456\u0432 \u043C\u0456\u0441\u0442\u043E \u0406\u0440\u043B\u0430\u043D\u0434\u0456\u0457 (\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E 90 000 \u0436\u0438\u0442\u0435\u043B\u0456\u0432). \u0423 \u043C\u0456\u0441\u0442\u0456 \u0434\u0456\u0454 \u041B\u0456\u043C\u0435\u0440\u0438\u043A\u0441\u044C\u043A\u0438\u0439 \u0443\u043D\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442, \u0432 \u044F\u043A\u043E\u043C\u0443 \u043D\u0430\u0432\u0447\u0430\u0454\u0442\u044C\u0441\u044F \u0431\u043B\u0438\u0437\u044C\u043A\u043E 17 000 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0456\u0432."@uk .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:County_towns_in_the_Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Horse_racing_venues_in_the_Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/utcOffsetDst>	"+1"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick est la troisi\u00E8me ville en population de l'Irlande avec une population de plus de habitants. Elle est situ\u00E9e \u00E0 l'ouest de l'Irlande sur une \u00EEle et le long du fleuve Shannon, dans le comt\u00E9 du m\u00EAme nom. Elle abrite beaucoup de mus\u00E9es et de galeries d'art comme le mus\u00E9e de Hunt, la collection d'autoportraits de l'universit\u00E9 et le mus\u00E9e de la ville de Limerick dont les b\u00E2timents eux-m\u00EAmes sont \u00E0 voir. La ville de Limerick est r\u00E9put\u00E9e pour \u00EAtre une ville sportive, gr\u00E2ce \u00E0 de nombreux \u00E9quipements \u00E0 la disposition de chacun, quel que soit son sport favori. On y trouve une universit\u00E9. Limerick est le cadre du best-seller de Frank McCourt, Les Cendres d'Angela dans lequel l'auteur d\u00E9crit son enfance dans les quartiers pauvres de la ville. Le troisi\u00E8me a\u00E9roport d'Irlande est situ\u00E9 pr\u00E8s de Limerick. Il s'agit de l'a\u00E9roport de Shannon."@fr .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationDemonym>	"Limerickman, Shannonsider"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://de.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/elevation>	"10.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://ko.dbpedia.org/resource/\uB9AC\uBA38\uB9AD> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://ru.dbpedia.org/resource/\u041B\u0438\u043C\u0435\u0440\u0438\u043A_(\u0433\u043E\u0440\u043E\u0434)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/motto>	"Studiisque Asperrima Belli''"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick es una ciudad capital del Condado de Limerick en la provincia de Munster, en el oeste de la Rep\u00FAblica de Irlanda."@es .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/CitiesInTheRepuBlicOfIreland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderTitle>	"D\u00E1il \u00C9ireann"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\u30EA\u30E0\u30EA\u30C3\u30AF\uFF08Limerick\uFF09\u306F\u30A2\u30A4\u30EB\u30E9\u30F3\u30C9\u306E\u30DE\u30F3\u30B9\u30BF\u30FC\u5730\u65B9\u30EA\u30E0\u30EA\u30C3\u30AF\u5DDE\u306B\u3042\u308B\u90FD\u5E02\u3002\u30B7\u30E3\u30CE\u30F3\u5DDD\u306E\u307B\u3068\u308A\u306B\u3042\u308B\u30022006\u5E74\u306E\u4EBA\u53E3\u306F\u7D0491,000\u3002"@ja .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/motto>	"very fierce in the skills of war\""@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"\u5229\u9ED8\u91CC\u514B \uFF08Limerick /\u02C8l\u026Amr\u026Ak/\uFF1B\u611B\u723E\u862D\u8A9E\uFF1A Luimneach\uFF09\u662F\u611B\u723E\u862D\u897F\u90E8\u7684\u4E00\u500B\u57CE\u5E02\uFF0C\u4F4D\u65BC\u9999\u8FB2\u6CB3\u6CB3\u53E3\u3002\u662F\u5229\u9ED8\u91CC\u514B\u90E1\u90E1\u6CBB\u30022006\u5E74\u4EBA\u53E390,778\u4EBA\u3002"@zh .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/timezoneDst>	<http://dbpedia.org/resource/Western_European_Summer_Time> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/CountyTownsInTheRepuBlicOfIreland> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://es.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/areaTotal>	"5.13e+07"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://ja.dbpedia.org/resource/\u30EA\u30E0\u30EA\u30C3\u30AF> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/TownsAndVillagesInCountyLimerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/blankInfo>	"L"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/imageSkyline>	"Limerick montage2.jpg"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprRecordLowC>	"-4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novRecordLowC>	"-6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/timeZone>	<http://dbpedia.org/resource/Western_European_Time> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick is een stad met circa 54.000 inwoners in het zuidwesten van Ierland. Limerick is de hoofdstad van de graafschap Limerick in de provincie Munster. De stad is het historische centrum van de regio en vervult tevens bepaalde regionale functies voor geheel West-Ierland. De stad ligt aan het estuarium van de Shannon. Deelnemer aan het project Water in Historic City Centres (WIHCC)."@nl .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octRainMm>	"93"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/VikingAgePopulatedPlaces> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick \u00E4r Irlands tredje st\u00F6rsta stad och residensstad i grevskapet County Limerick i provinsen Munster, som ligger i v\u00E4stra delen av landet. Staden ligger vid Shannonfloden, som kan korsas p\u00E5 tre st\u00E4llen p\u00E5 kort avst\u00E5nd fr\u00E5n stadsk\u00E4rnan. Staden har ocks\u00E5 gett upphov till en diktform, n\u00E4mligen limerick. Limerick \u00E4r framf\u00F6r allt k\u00E4nd f\u00F6r sina rugbytraditioner, som bland annat inbegriper den ber\u00F6mda Garryowen rugby club som gett namn \u00E5t \"the high rugby kick\". Befolkningen i staden med omgivningar var 86 998 \u00E5r 2002 medan sj\u00E4lva t\u00E4torten hade 54 023 inv\u00E5nare, allt enligt Central Statistics Office of Ireland. Limerick \u00E4r v\u00E4nort med Quimper i Frankrike och Spokane, Washington i USA."@sv .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/timezone>	<http://dbpedia.org/resource/Western_European_Time> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepRainMm>	"82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderName>	"Jim Long"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/timeZone>	<http://dbpedia.org/resource/Western_European_Summer_Time> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/ontology/Place> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderName>	<http://dbpedia.org/resource/Limerick_(D%C3%A1il_%C3%89ireann_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decRainMm>	"99"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novRainMm>	"95"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:River_Shannon> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderName>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayLowC>	"7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junLowC>	"10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderName>	<http://dbpedia.org/resource/Limerick_City_(D%C3%A1il_%C3%89ireann_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepSun>	"111"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick \u00E4r Irlands tredje st\u00F6rsta stad och residensstad i grevskapet County Limerick i provinsen Munster, som ligger i v\u00E4stra delen av landet. Staden ligger vid Shannonfloden, som kan korsas p\u00E5 tre st\u00E4llen p\u00E5 kort avst\u00E5nd fr\u00E5n stadsk\u00E4rnan. Staden har ocks\u00E5 gett upphov till en diktform, n\u00E4mligen limerick. Limerick \u00E4r framf\u00F6r allt k\u00E4nd f\u00F6r sina rugbytraditioner, som bland annat inbegriper den ber\u00F6mda Garryowen rugby club som gett namn \u00E5t \"the high rugby kick\"."@sv .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.limerickcity.ie/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprLowC>	"5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/wordnet_type>	<http://www.w3.org/2006/03/wn/wn20/instances/synset-location-noun-1> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febLowC>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julLowC>	"12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearHumidity>	"73"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepHumidity>	"71"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augLowC>	"12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearSnowDays>	"11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/sepLowC>	"10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octLowC>	"8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junRecordLowC>	"2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick on Irlannin kolmanneksi suurin kaupunki. Se sijaitsee Limerickin kreivikunnassa, Munsterin provinssissa L\u00E4nsi-Irlannissa. Limerickin asukasluku on noin 56\u00A0000."@fi .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/areaTotalKm>	"51"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick \u00E9 uma cidade do Eire ou Irlanda, na foz do rio Shannon, na prov\u00EDncia de Munster. Tem 52,539 habitantes e \u00E9 a segunda maior cidade da prov\u00EDncia. Limerick possui ind\u00FAstrias de carne e muitas atividades comerciais e agr\u00EDcolas. A temperatura m\u00E9dia anual em Limerick \u00E9 11\u00A0\u00B0C e o \u00EDndice pluviom\u00E9trico 927mm. Desde 1898 a cidade possui estatuto de condado administrativo (county-boroughs)."@pt .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.limerick.ie/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearMeanC>	"10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/motto>	"''Urbs Antiqua Fuit"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augRecordLowC>	"3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://xmlns.com/foaf/0.1/name>	"Limerick"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julHumidity>	"68"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.limerick.ie/CityMuseum> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick is a city in the Mid-West or Shannon Region of Ireland. It is the fifth most populous city on the island of Ireland and when taking the extra-municipal suburbs into account, Limerick is the third largest urban area in the Republic of Ireland, with a population of 91,454. Limerick is also the second-largest city in the province of Munster, an area that constitutes the midwest and southwest of Ireland."@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick Land22x18px\u00A0IrlandProvins:MunsterGrevskap:LimerickStatusByBefolkning52\u00A0560 Limerick ligger i Irland8x8pxLimerick52\u00B040\u2032N 8\u00B037\u2032VKoordinater: 52\u00B040\u2032N 8\u00B037\u2032V Title=Limerick;ns=0/Main/;language:wiki=no,locale=no p\u00E5 Commons Limerick er administrasjonsbyen i grevskapet Limerick i Republikken Irland. Den ligger ved elven Shannon. Byen har i underkant av 53\u00A0000 innbyggere innenfor bygrensen, men med forsteder har den i overkant av 93\u00A0000."@no .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2003/01/geo/wgs84_pos#long>	"-8.6238"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octSun>	"82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/areaCode>	"61"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick \u00E9 uma cidade do Eire ou Irlanda, na foz do rio Shannon, na prov\u00EDncia de Munster. Tem 52,539 habitantes e \u00E9 a segunda maior cidade da prov\u00EDncia. Limerick possui ind\u00FAstrias de carne e muitas atividades comerciais e agr\u00EDcolas. A temperatura m\u00E9dia anual em Limerick \u00E9 11\u00A0\u00B0C e o \u00EDndice pluviom\u00E9trico 927mm. Desde 1898 a cidade possui estatuto de condado administrativo (county-boroughs)."@pt .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febHumidity>	"75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick ist die Hauptstadt der Grafschaft Limerick in der Provinz Munster im S\u00FCdwesten der Republik Irland. Die Stadt hat 56.779 Einwohner, mit Vororten 90.778 Einwohner (Stand 2011). Sie ist historisches Zentrum der Region und in einigen Bereichen Zentrum f\u00FCr den Westen Irlands. Der gr\u00F6\u00DFte Fluss Irlands, der Shannon, durchflie\u00DFt die Stadt und m\u00FCndet hinter Limerick als Shannon Estuary in den Atlantik."@de .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick, nach\u00E1zej\u00EDc\u00ED se na z\u00E1pad\u011B Irska v\u00A0b\u00FDval\u00E9 provincii Munster, je se sv\u00FDmi 56\u00A0779 obyvateli \u010Dtvrt\u00FDm nejv\u011Bt\u0161\u00EDm m\u011Bstem v\u00A0Irsk\u00E9 republice (s\u00A0aglomerac\u00ED \u010D\u00EDtaj\u00EDc\u00ED 90\u00A0757 obyvatel dokonce t\u0159et\u00EDm) a z\u00E1rove\u0148 p\u00E1t\u00FDm nejv\u011Bt\u0161\u00EDm m\u011Bstem na cel\u00E9m ostrov\u011B. Limerick je takt\u00E9\u017E hlavn\u00EDm m\u011Bstem stejnojmenn\u00E9ho hrabstv\u00ED."@cs .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://fr.dbpedia.org/resource/Limerick_(Irlande)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"\u30EA\u30E0\u30EA\u30C3\u30AF\uFF08Limerick\uFF09\u306F\u30A2\u30A4\u30EB\u30E9\u30F3\u30C9\u306E\u30DE\u30F3\u30B9\u30BF\u30FC\u5730\u65B9\u30EA\u30E0\u30EA\u30C3\u30AF\u5DDE\u306B\u3042\u308B\u90FD\u5E02\u3002\u30B7\u30E3\u30CE\u30F3\u5DDD\u306E\u307B\u3068\u308A\u306B\u3042\u308B\u30022006\u5E74\u306E\u4EBA\u53E3\u306F\u7D0491,000\u3002"@ja .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/decSun>	"44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"\u041B\u0438\u043C\u0435\u0440\u0438\u043A (\u0433\u043E\u0440\u043E\u0434)"@ru .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick Land22x18px\u00A0IrlandProvins:MunsterGrevskap:LimerickStatusByBefolkning52\u00A0560 Limerick ligger i Irland8x8pxLimerick52\u00B040\u2032N 8\u00B037\u2032VKoordinater: 52\u00B040\u2032N 8\u00B037\u2032V Title=Limerick;ns=0/Main/;language:wiki=no,locale=no p\u00E5 Commons Limerick er administrasjonsbyen i grevskapet Limerick i Republikken Irland. Den ligger ved elven Shannon. Byen har i underkant av 53\u00A0000 innbyggere innenfor bygrensen, men med forsteder har den i overkant av 93\u00A0000. Den regnes som den fjerde st\u00F8rste byen i landet, og den femte st\u00F8rste p\u00E5 hele Irland. Byen ble grunnlagt senest i forbindelse med vikingenes ankomst i 812, men det er tegn til at det ogs\u00E5 var bosetninger der tidligere. I det 12. \u00E5rhundre ble den omstrukturert av normannerne, som blant annet reiste King John's Castle og St. Mary's katedral. Under borgerkrigene i det 17. \u00E5rhundre spilte byen en viktig rolle. Den ble beleiret av Oliver Cromwell i 1651 og to ganger av Vilhelm IIIs menn i 1690-\u00E5rene. I det 18. \u00E5rhundre begynte byen \u00E5 vokse og ble velst\u00E5ende p\u00E5 grunn av handel. Act of Union 1800 f\u00F8rte med seg nedgangstider, som ble enda verre under hungersn\u00F8den 1845-1849. F\u00F8rst med den s\u00E5kalte \u00ABkeltiske tiger\u00BB i 1990-\u00E5rene ble denne trenden snudd. Waterford and Limerick Railway forbandt fra 1848 byen med hovedlinjen mellom Dublin og Cork. P\u00E5 grunn av at flere mindre linjer ble \u00E5pnet senere i det 19. \u00E5rhundre, ble Limerick et viktig regionalt senter. Shannon Internasjonale Flyplass ligger omkring 20 km utenfor byen, i Clare. Av severdigheter, kan nevnes: Hunt Museum St. Mary's katedral Limerick Museum Limerick City Gallery of Art National Self-Portrait Collection The Water Colour Society of Ireland Permanent Collection Universitetets O'Malley Collection (Irsk-Amerikansk) I byens umiddelbare omkrets finnes flere gamle festninger og annet."@no .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/aprHighC>	"13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/mayHighC>	"15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/junHighC>	"18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick (Luimneach, cio\u00E8 \"palude deserta\", in irlandese) \u00E8 una citt\u00E0 della Repubblica d'Irlanda, situata nella parte sud-occidentale della nazione, a ridosso della foce del fiume Shannon che la attraversa. \u00C8 capoluogo dell'omonima contea, nella provincia del Munster."@it .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationBlank>	"91454"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionType>	<http://dbpedia.org/resource/Counties_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octRecordHighC>	"22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/PortCitiesAndTownsInTheRepuBlicOfIreland> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://it.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/novSun>	"58"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/location>	"Shannon Airport Weather Observing Station 1961\u00F11990"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/motto>	"\"There was an ancient city"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://pt.dbpedia.org/resource/Limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/octHighC>	"14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2003/01/geo/wgs84_pos#geometry>	"POINT(-8.6238 52.6652)"^^<http://www.openlinksw.com/schemas/virtrdf#Geometry> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderName>	<http://dbpedia.org/resource/Limerick_City_(D%C3%A1il_%C3%89ireann_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/augRainMm>	"82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/subdivisionType>	<http://dbpedia.org/resource/Provinces_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/elevationM>	"10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/motto>	"Studiisque Asperrima Belli''(Latin)"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/yearRecordHighC>	"32"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/marSun>	"104"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/Locations> .
+<http://dbpedia.org/resource/Limerick>	<http://www.georss.org/georss/point>	"52.6652 -8.6238"@en .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/class/yago/GeoclassSeatOfAFirst-orderAdministrativeDivision> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"\uB9AC\uBA38\uB9AD\uC740 \uC544\uC77C\uB79C\uB4DC\uC758 \uB3C4\uC2DC\uB85C, \uC778\uAD6C\uB294 \uC57D 9\uB9CC 1\uCC9C\uBA85(2002\uB144 \uAE30\uC900)\uC774\uB2E4. \uC11C\uC548\uC5D0 \uC788\uC5B4\uC11C\uC758 \uD56D\uAD6C\uB85C\uC11C \uC911\uC694\uD55C \uC5ED\uD560\uC744 \uD558\uBA70, \uC608\uB85C\uBD80\uD130 \uACF5\uC5C5\uACFC \uC0C1\uC5C5\uC758 \uC911\uC2EC\uC73C\uB85C \uB418\uC5B4 \uC788\uB2E4. \uC81C\uBD84\uC5C5\uC740 \uC544\uC77C\uB79C\uB4DC \uC81C1\uC774\uC9C0\uB9CC \uB18D\uAE30\uAD6C\u00B7\uBCA0\uC774\uCEE8\u00B7\uC720\uC81C\uD488\u00B7\uC591\uC870\uACF5\uC5C5\u00B7\uC5F0\uC5B4\uC7A1\uC774\uB3C4 \uC131\uD558\uB2E4. \uB9AC\uBA38\uB9AD \uC2DC\uC758 \uC11C\uBC29 25\u339E\uC5D0 \uC0C8\uB10C \uACF5\uD56D(Shannon Airport)\uC774 \uC788\uB2E4. \uC774 \uACF5\uD56D\uC740 \uC790\uC720\uACF5\uD56D\uC73C\uB85C\uC11C, \uACF5\uD56D \uC548\uC5D0\uB294 \uC678\uAD6D\uC73C\uB85C\uBD80\uD130\uC758 \uACF5\uC7A5\uC744 \uC720\uCE58\uD558\uACE0 \uC788\uB2E4."@ko .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/leaderName>	<http://dbpedia.org/resource/South_(European_Parliament_constituency)> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://two.archiseek.com/archives/tag/limerick> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick ist die Hauptstadt der Grafschaft Limerick in der Provinz Munster im S\u00FCdwesten der Republik Irland. Die Stadt hat 56.779 Einwohner, mit Vororten 90.778 Einwohner (Stand 2011). Sie ist historisches Zentrum der Region und in einigen Bereichen Zentrum f\u00FCr den Westen Irlands. Der gr\u00F6\u00DFte Fluss Irlands, der Shannon, durchflie\u00DFt die Stadt und m\u00FCndet hinter Limerick als Shannon Estuary in den Atlantik."@de .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Limerick_(city)> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Limerick, nach\u00E1zej\u00EDc\u00ED se na z\u00E1pad\u011B Irska v\u00A0b\u00FDval\u00E9 provincii Munster, je se sv\u00FDmi 56\u00A0779 obyvateli \u010Dtvrt\u00FDm nejv\u011Bt\u0161\u00EDm m\u011Bstem v\u00A0Irsk\u00E9 republice (s\u00A0aglomerac\u00ED \u010D\u00EDtaj\u00EDc\u00ED 90\u00A0757 obyvatel dokonce t\u0159et\u00EDm) a z\u00E1rove\u0148 p\u00E1t\u00FDm nejv\u011Bt\u0161\u00EDm m\u011Bstem na cel\u00E9m ostrov\u011B. Limerick je takt\u00E9\u017E hlavn\u00EDm m\u011Bstem stejnojmenn\u00E9ho hrabstv\u00ED."@cs .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febRainMm>	"72"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2002/07/owl#sameAs>	<http://linkedgeodata.org/triplify/node428339453> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@ca .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/wikiPageUsesTemplate>	<http://dbpedia.org/resource/Template:Weather_box> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/governmentType>	<http://dbpedia.org/resource/Limerick_City_Council> .
+<http://dbpedia.org/resource/Limerick>	<http://purl.org/dc/terms/subject>	<http://dbpedia.org/resource/Category:Cities_in_the_Republic_of_Ireland> .
+<http://dbpedia.org/resource/Limerick>	<http://www.w3.org/2000/01/rdf-schema#label>	"Limerick"@sv .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/febSun>	"66"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/leaderTitle>	<http://dbpedia.org/resource/Local_electoral_area> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/website>	<http://www.limerickcity.ie/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/areaCode>	"(+353) 61"@en .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/populationAsOf>	"2011"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://xmlns.com/foaf/0.1/homepage>	<http://www.limerickcity.ie/> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/property/julRainMm>	"57"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/abstract>	"Limerick (Luimneach en ga\u00E8lic irland\u00E8s, que v\u00E9 de Lom na nEach - lloc obert als cavalls) \u00E9s la tercera ciutat de la Rep\u00FAblica d'Irlanda i la quarta ciutat m\u00E9s gran de tota l'illa despr\u00E9s de Dubl\u00EDn, Belfast i Cork, en aquest ordre. Es tracta de la ciutat principal i el centre administratiu del comtat de Limerick i la segona ciutat m\u00E9s gran de la prov\u00EDncia de Munster. L'\u00E0rea metropolitana arriba als 93.251 habitants."@ca .
+<http://dbpedia.org/resource/Limerick>	<http://dbpedia.org/ontology/wikiPageExternalLink>	<http://www.ul.ie> .
