@@ -85,7 +85,19 @@ In order to query the mrlin datastore in HBase, use the [`mrlin query`](https://
 
 * setup in virtual env: `source hb/bin/activate` then `pip install mrjob`
 * `cp .mrjob.conf ~` before launch
-* run `python mrlin_mr.py README.md`
+* `source hb/bin/activate`
+* run `python mrlin_mr.py README.md` for standalone
+* set up [Hadoop 1.0.4](http://ftp.heanet.ie/mirrors/www.apache.org/dist/hadoop/common/hadoop-1.0.4/hadoop-1.0.4.tar.gz) - if unsure follow a [single-node setup](http://orzota.com/blog/single-node-hadoop-setup-2/)  tutorial
+* `cp .mrjob.conf ~` before launch if you change settings (!)
+* note all changes that were necessary in ` conf/core-site.xml`, `conf/mapred-site.xml`, `conf/hdfs-site.xml`, and `hadoop-env.sh` (provide examples)
+* run `python mrlin_mr.py -r hadoop README.md` for local Hadoop 
+
+
+#### Debug
+
+* `tail -f hadoop-michau-namenode-Michael-Hausenblas-iMac.local.log`
+
+
 
 ## License
 
